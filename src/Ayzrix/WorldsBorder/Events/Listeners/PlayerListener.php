@@ -35,8 +35,8 @@ class PlayerListener implements Listener {
                     if (!is_null($values["message"])) $event->getPlayer()->sendMessage($values["message"]);
                     if ($values["kick"] === true) {
                         $player->teleport($event->getTo());
-                        Main::getInstance()->getScheduler()->scheduleDelayedTask(new ClosureTask(function(int $currentTick) use($player, $event, $values) : void {
-                            $event->getPlayer()->kick($values["kickMessage"], false);
+                        Main::getInstance()->getScheduler()->scheduleDelayedTask(new ClosureTask(function(int $currentTick) use($player, $values) : void {
+                            $player->kick($values["kickMessage"], false);
                         }), 5);
                         return;
                     }
