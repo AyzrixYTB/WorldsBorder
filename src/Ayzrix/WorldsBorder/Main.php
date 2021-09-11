@@ -14,6 +14,7 @@
 namespace Ayzrix\WorldsBorder;
 
 use Ayzrix\WorldsBorder\Events\Listeners\PlayerListener;
+use Ayzrix\WorldsBorder\Utils\Utils;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\SingletonTrait;
 
@@ -27,5 +28,6 @@ class Main extends PluginBase {
     public function onEnable() {
         $this->saveDefaultConfig();
         $this->getServer()->getPluginManager()->registerEvents(new PlayerListener(), $this);
+        Utils::loadConfig();
     }
 }

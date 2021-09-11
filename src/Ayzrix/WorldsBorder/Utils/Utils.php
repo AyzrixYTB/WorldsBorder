@@ -16,13 +16,18 @@ namespace Ayzrix\WorldsBorder\Utils;
 use Ayzrix\WorldsBorder\Main;
 
 class Utils {
+    
+    public static $config;
+
+    public static function loadConfig() {
+        self::$config = Main::getInstance()->getConfig()->getAll();
+    }
 
     /**
      * @param string $value
-     * @return bool|mixed
+     * @return mixed
      */
     public static function getIntoConfig(string $value) {
-        return Main::getInstance()->getConfig()->get($value);
+        return self::$config[$value];
     }
-
 }
