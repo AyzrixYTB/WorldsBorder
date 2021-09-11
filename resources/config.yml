@@ -1,18 +1,4 @@
-# WorldsBorder
-
-###### Simple plugin allowing you to define a different border for each world on your server.
-
-## Features
-
-| Feature                                           | WorldsBorder    | WorldLimits  |
-|---------------------------------------------------|-----------------|--------------|
-| `Prevent head movements from executing code`      | ✔               | ❌           |
-| `Multiple worlds border support`                  | ✔               | ❌           | 
-| `Kick possibility`                                | ✔               | ❌           | 
-| `Teleport possibility`                            | ✔               | ✔           |
-
-## Config
-```yaml
+---
 #   __          __        _     _     ____                _
 #   \ \        / /       | |   | |   |  _ \              | |
 #    \ \  /\  / /__  _ __| | __| |___| |_) | ___  _ __ __| | ___ _ __
@@ -47,4 +33,3 @@ worlds:
     teleportPosition: "0:0:0:world"
     kick: false
     kickMessage: ""
-```
